@@ -1,0 +1,66 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>zvue</title>
+    <style>
+        *{margin:0;padding: 0;box-sizing: border-box}
+
+        :root{
+            --button-height:32px;
+            --foot-size:14PX;
+            --button-bg:#fff;
+            --button-active-bg:#eee;
+            --boder-radius:4px;
+            --color:#999;
+            --border-color:#999;
+            --border-color-hover:#666;
+        }
+        #app{
+            margin: 20px;
+        }
+        body{
+            font-size: var(--font-size)
+        }
+    </style>
+    <style>
+        .z-button{
+            font-size: var(--font-size);
+            height: var(--button-height);
+            padding:  0 1em;
+            border-radius: var(--boder-radius);
+            border: 1px solid var(--border-color);
+            background: var(--button-bg)
+        }
+        .z-button:hover{
+            border-color: var(--border-color-hover)
+        }
+
+        .z-button:active{
+            background: var(--button-active-bg)
+        }
+
+        .z-button:focus{
+            outline: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="app">
+        <z-button></z-button>
+    </div>
+
+<script src="./node_modules/_vue@2.6.8@vue/dist/vue.min.js"></script>
+<script src='./button.js'></script>
+<script>
+    new Vue({
+        el:'#app',
+        
+    })
+</script>
+</body>
+</html>
