@@ -1,0 +1,23 @@
+{
+  "name": "zvue",
+  "version": "1.0.0",
+  "description": "UI组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vasesen/zvue.git"
+  },
+  "keywords": [
+    "vue",
+    "ui"
+  ],
+  "author": "vasesen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vasesen/zvue/issues"
+  },
+  "homepage": "https://github.com/vasesen/zvue#readme"
+}
