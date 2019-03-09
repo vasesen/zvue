@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/vasesen/zvue/issues"
   },
-  "homepage": "https://github.com/vasesen/zvue#readme"
+  "homepage": "https://github.com/vasesen/zvue#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.11.0",
+    "vue-template-compiler": "^2.6.8"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
 }
