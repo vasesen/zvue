@@ -21,10 +21,25 @@
   },
   "homepage": "https://github.com/vasesen/zvue#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.11.0",
+    "@vue/component-compiler-utils": "^2.6.0",
+    "autoprefixer": "^9.4.10",
+    "cssnext": "^1.8.4",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.12.0",
     "vue-template-compiler": "^2.6.8"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
+  },
+  "dependencies": {
+    "escape-string-regexp": "^1.0.5",
+    "is-accessor-descriptor": "^3.0.1",
+    "is-data-descriptor": "^2.0.0",
+    "is-descriptor": "^3.0.0",
+    "is-extglob": "^2.1.1",
+    "is-plain-object": "^2.0.4",
+    "split-string": "^6.0.0",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue": "^2.5.16"
   }
 }
