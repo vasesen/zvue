@@ -25,12 +25,25 @@
             font-size: var(--font-size)
         }
     </style>
+    <style>
+        .icon{
+            height: 1em;
+            width: 1em
+            /* 默认和字体一样高 */
+        }
+    </style>
 </head>
 <body>
     <div id="app">
-        <z-button></z-button>
+        <z-button icon="settings">           
+            settings
+        </z-button>
+        <z-button icon="download" icon-position="right">           
+            下载
+        </z-button>
     </div>
 
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_1082373_ipq0nvwqf09.js" ></script>
 </body>
 </html>
