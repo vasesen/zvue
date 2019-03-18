@@ -1,7 +1,10 @@
 <template>    
-    <button class="z-button" :class="{[`icon-${iconPosition}`]:true}">
-        <z-icon class="icon" :name="icon" v-if="icon"></z-icon>
-        <div class="content">
+    <button class="z-button" :class="{[`icon-${iconPosition}`]:true}"
+    @click="$emit('click')"
+    >
+        <z-icon class="icon" :name="icon" v-if="icon && !loading"></z-icon>
+        <z-icon class="loading icon" v-if="loading" name="loading"></z-icon>
+        <div  class="content">
             <slot></slot>
         </div>       
     </button>
@@ -10,6 +13,10 @@
 export default {
     props:{
         icon:{},
+        loading:{
+            type:Boolean,
+            default:false
+        },
         iconPosition:{
             type:String,
             default:'left',
@@ -28,6 +35,14 @@ export default {
 }
 </script>
 <style lang="scss">
+    @keyframes spin {
+        0%{
+            transform: rotate(0deg)
+        }
+        100%{
+           transform: rotate(360deg) 
+        }
+    }
     .z-button{
         font-size: var(--font-size);
         height: var(--button-height);
@@ -36,6 +51,7 @@ export default {
         border: 1px solid var(--border-color);
         background: var(--button-bg);
         display: inline-flex;
+        // 水平居中
         justify-content: center;
         align-items: center;
         vertical-align: middle;
@@ -53,6 +69,9 @@ export default {
         &.icon-right{
             > .icon{order: 2;}
             > .content{order: 1;margin-right:0;margin-left: .3em}
+        }
+        .loading{
+            animation: spin  1.5s infinite linear;
         }
     }
     

@@ -28,15 +28,28 @@
 </head>
 <body>
     <div id="app">
-        <z-button icon="settings">           
+        <z-button  :loading="loading1" @click="loading1= !loading1">           
+            按钮
+        </z-button>
+        <z-button icon="settings" >           
             settings
         </z-button>
-        <z-button icon="download" icon-position="right">           
+        <z-button icon="download" icon-position="right" :loading="loading2" @click="loading2= !loading2">           
             下载
         </z-button>
+
+        <z-button icon="thumbs-up" icon-position="left">           
+            点赞
+        </z-button>
+
+        <z-button-group>
+            <z-button icon="left">上一页</z-button>
+            <z-button >更多</z-button>
+            <z-button icon="right" icon-position="right">下一页</z-button>
+        </z-button-group>
     </div>
 
 <script src="./src/app.js"></script>
-<script src="//at.alicdn.com/t/font_1082373_ipq0nvwqf09.js" ></script>
+<script src="//at.alicdn.com/t/font_1082373_k3je924m2m.js" ></script>
 </body>
 </html>
