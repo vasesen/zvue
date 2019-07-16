@@ -15,3 +15,12 @@ new Vue({
         loading2 : false
     }
 })
+//单元测试++
+// {
+//     const Constructor = Vue.extend(Button)
+//     const button = new Constructor()
+//      propsData:{
+//          icon:'settings'
+//      }
+//     button.$mount(`#test`)
+// }
