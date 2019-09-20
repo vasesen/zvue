@@ -7,7 +7,8 @@
 export default {
     mounted(){
         for( let node of this.$el.children){
-            if(node.nodeName !== 'button'){
+            let name = node.nodeName.toLowerCase()
+            if(name !== 'button'){
                 console.warn(`z-button-group 的子元素应该全是z-button,但是你写的是 ${name}`)
             }
         }
@@ -21,7 +22,9 @@ export default {
         vertical-align: middle;
         > .z-button {
             border-radius: 0;
-            margin-left: -1px;
+            &:not(:first-child){
+                margin-left: -1px;
+            }   
             &:first-child{
                 border-top-left-radius: var(--boder-radius);
                 border-bottom-left-radius: var(--boder-radius);
