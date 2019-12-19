@@ -11,7 +11,7 @@ export default {
 <style scoped>
 .z-icon{
     height: 1em;
-    width: 1em
+    width: 1em;
     /* 默认和字体一样高 */
     }
 </style>
