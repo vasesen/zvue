@@ -23,7 +23,7 @@
   "homepage": "https://github.com/vasesen/zvue#readme",
   "devDependencies": {
     "@vue/component-compiler-utils": "^2.6.0",
-    "autoprefixer": "^9.4.10",
+    "autoprefixer": "^9.7.3",
     "babel-core": "^6.26.3",
     "chai": "^4.2.0",
     "chai-spies": "^1.0.0",
@@ -36,10 +36,10 @@
     "karma-sinon-chai": "^2.0.2",
     "mocha": "^6.2.2",
     "node-sass": "^4.13.0",
-    "parcel-bundler": "^1.12.3",
+    "parcel-bundler": "^1.12.4",
     "sinon": "^7.5.0",
     "sinon-chai": "^3.3.0",
-    "vue-template-compiler": "^2.6.8"
+    "vue-template-compiler": "^2.6.11"
   },
   "alias": {
     "vue": "./node_modules/vue/dist/vue.common.js"
@@ -52,8 +52,7 @@
     "is-extglob": "^2.1.1",
     "is-plain-object": "^2.0.4",
     "split-string": "^6.0.0",
-    "vue": "^2.5.16",
-    "vue-hot-reload-api": "^2.3.3",
-    "vue-template-compiler": "^2.6.7"
+    "vue": "^2.6.11",
+    "vue-hot-reload-api": "^2.3.4"
   }
 }
