@@ -3,12 +3,16 @@ import Button from './Button'
 import Icon from './icon'
 import ButtonGroup from './button-group.vue'
 import Input from './input.vue'
+import Col from './layout/col.vue'
+import Row from './layout/row.vue'
 
 
 Vue.component('z-button',Button)
 Vue.component('z-icon',Icon)
 Vue.component('z-button-group',ButtonGroup)
 Vue.component('z-input',Input)
+Vue.component('z-col',Col)
+Vue.component('z-row',Row)
 new Vue({
     el:'#app',
     data:{
