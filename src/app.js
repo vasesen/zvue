@@ -13,7 +13,8 @@ new Vue({
     el:'#app',
     data:{
         loading1 : false,
-        loading2 : false
+        loading2 : false,
+        message:'双向绑定'
     },
     methods:{
         inputChange(e){

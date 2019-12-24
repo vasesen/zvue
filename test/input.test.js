@@ -77,9 +77,11 @@ describe('Input', ()=>{
                 const callback = sinon.fake();
                 vm.$on(eventName,callback)
                 let event = new Event(eventName)
+                //此处event 只读属性  网上教程用这个属性 
+                Object.defineProperty(event,'target',{value:{value:'双向绑定'},enumerable:true})
                 const inputElement = vm.$el.querySelector('input')
                 inputElement.dispatchEvent(event)
-                expect(callback).to.have.been.calledWith(event)
+                expect(callback).to.have.been.calledWith('双向绑定')
             })
         })
         // it('支持change事件',()=>{   
