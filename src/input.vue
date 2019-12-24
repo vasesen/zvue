@@ -1,8 +1,13 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input :value="value" type="text" :disabled="disabled" :readonly="readonly" >
+        <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+            @change="$emit('change',$event)" 
+            @input="$emit('input',$event)"
+            @blur="$emit('blur',$event)"
+            @focus="$emit('focus',$event)"/>
+            
         <template  v-if="error">
-            <icon name="settings" class="icon-error"></icon>
+            <icon name="error" class="icon-error"></icon>
             <span class="errorMessage">{{error}}</span>
         </template>
     </div>
@@ -11,7 +16,7 @@
 import Icon from './icon'
 export default {
     components:{
-        Icon
+        Icon  
     },
     name:'ZInput',
     props:{
@@ -37,7 +42,7 @@ export default {
     $border-color:#999;
     $border-color-hover:#666;
     $border-radius:4px;
-    $font-size:12PX;
+    $font-size:12px;
     $box-shadow-color:rgba(0,0,0,0.5);
     $red:#f1453d;
     .wrapper{
