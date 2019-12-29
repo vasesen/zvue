@@ -1,6 +1,5 @@
 const expect  = chai.expect
 import Vue from "vue"
-import Row from '../src/grid/row'
 import Col from '../src/grid/col'
 
 Vue.config.productionTip = false
@@ -20,7 +19,7 @@ describe('Col',()=>{
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('col-1')).to.eq(true)
+        expect(element.classList.contains('col-1')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
@@ -30,11 +29,11 @@ describe('Col',()=>{
         const Constructor = Vue.extend(Col)
         const vm = new Constructor({
             propsData:{
-                span:1
+                offset:1
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('offset-1')).to.eq(true)
+        expect(element.classList.contains('offset-1')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
