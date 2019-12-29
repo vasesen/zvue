@@ -54,11 +54,11 @@ export default {
             let {span, offset, ipad, narrowPc, pc, widePc} = this
             let createClasses = this.createClasses
             return [
-            ...createClasses({span, offset}),
-            ...createClasses(ipad, 'ipad-'),
-            ...createClasses(narrowPc, 'narrow-pc-'),
-            ...createClasses(pc, 'pc-'),
-            ...createClasses(widePc, 'wide-pc-'),
+              ...createClasses({span, offset}),
+              ...createClasses(ipad, 'ipad-'),
+              ...createClasses(narrowPc, 'narrow-pc-'),
+              ...createClasses(pc, 'pc-'),
+              ...createClasses(widePc, 'wide-pc-'),
             ]
         }
     }

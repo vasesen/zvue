@@ -18,9 +18,9 @@
             --border-color:#999;
             --border-color-hover:#666;
         }
-        #app{
+        /* #app{
             margin: 20px;
-        }
+        } */
         body{
             font-size: var(--font-size)
         }
@@ -28,7 +28,7 @@
 </head>
 <body>
     <div id="app">
-        <z-button  :loading="loading1" @click="loading1= !loading1">           
+        <!-- <z-button  :loading="loading1" @click="loading1= !loading1">           
             按钮
         </z-button>
         <z-button icon="settings" >           
@@ -47,8 +47,18 @@
             <z-button >更多</z-button>
             <z-button icon="right" icon-position="right">下一页</z-button>
         </z-button-group>
-        
-        <z-input v-model="message" @change="inputChange"></z-input>
+         <z-input v-model="message" @change="inputChange"></z-input> -->
+
+         <z-layout style="height: 100vh;">
+             <z-header >header</z-header>
+            <z-layout>
+                <z-content >content</z-content>
+                <z-sider >sider</z-sider>
+            </z-layout>
+             
+             <z-footer>footer</z-footer>
+         </z-layout>
+
         
     </div>
 
