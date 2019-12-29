@@ -20,7 +20,7 @@ describe('Col',()=>{
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('col-l')).to.eq(true)
+        expect(vm.$el.classList.contains('col-1')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
@@ -34,7 +34,7 @@ describe('Col',()=>{
             }
         }).$mount(div)
         const element = vm.$el
-        expect(vm.$el.classList.contains('offset-l')).to.eq(true)
+        expect(vm.$el.classList.contains('offset-1')).to.eq(true)
         div.remove()
         vm.$destroy()
     })
