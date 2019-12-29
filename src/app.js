@@ -3,8 +3,8 @@ import Button from './Button'
 import Icon from './icon'
 import ButtonGroup from './button-group.vue'
 import Input from './input.vue'
-import Col from './layout/col.vue'
-import Row from './layout/row.vue'
+import Col from './grid/col.vue'
+import Row from './grid/row.vue'
 
 
 Vue.component('z-button',Button)
