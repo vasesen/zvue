@@ -9,6 +9,8 @@ import Layout from './layout'
 import Header from './header'
 import Sider from './sider'
 import Content from './content'
+import Toast from './toast'
+
 
 Vue.component('z-button',Button)
 Vue.component('z-icon',Icon)
@@ -20,7 +22,7 @@ Vue.component('z-layout',Layout)
 Vue.component('z-header',Header)
 Vue.component('z-sider',Sider)
 Vue.component('z-content',Content)
-
+Vue.component('z-toast', Toast)
 new Vue({
     el:'#app',
     data:{
@@ -28,9 +30,12 @@ new Vue({
         loading2 : false,
         message:'双向绑定'
     },
+    created(){
+        this.showToast()
+    },
     methods:{
-        inputChange(e){
-            console.log(e.target.value)
-        }
+       showToast(){
+           this.$toast('toast message')
+       }
     }
 })
