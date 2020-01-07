@@ -39,8 +39,17 @@ new Vue({
         
     },
     methods:{
-       showToast(){
-           this.$toast('toast message')
-       }
+        showToast(){
+            this.$toast('请注意你的言辞！',{
+                enableHtml:false,
+                position:'middle',
+                closeButton:{
+                    text:'关闭',
+                    callback(){}
+                },
+                autoClose:false,
+                autoCloseDelay:300
+            })
+        }
     }
 })
