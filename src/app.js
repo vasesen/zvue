@@ -9,8 +9,9 @@ import Layout from './layout'
 import Header from './header'
 import Sider from './sider'
 import Content from './content'
+import Footer from './footer'
 import Toast from './toast'
-
+import Pulgin from './plugin'
 
 Vue.component('z-button',Button)
 Vue.component('z-icon',Icon)
@@ -22,7 +23,11 @@ Vue.component('z-layout',Layout)
 Vue.component('z-header',Header)
 Vue.component('z-sider',Sider)
 Vue.component('z-content',Content)
+Vue.component('z-footer',Footer)
 Vue.component('z-toast', Toast)
+Vue.use(Pulgin)
+
+
 new Vue({
     el:'#app',
     data:{
@@ -31,7 +36,7 @@ new Vue({
         message:'双向绑定'
     },
     created(){
-        this.showToast()
+        
     },
     methods:{
        showToast(){
