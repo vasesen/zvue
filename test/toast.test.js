@@ -21,7 +21,7 @@ describe('Toast',()=>{
                 }            
             }).$mount(div)
             setTimeout(()=>{
-                expect(document.body.contains(vm.$el).to.eq(false))
+                expect(document.body.contains(vm.$el).to.equal(false))
                 done()
             },1600)
         })
@@ -38,7 +38,7 @@ describe('Toast',()=>{
                 }            
             }).$mount()
            let closeButton = vm.$el.querySelector('.close') 
-           expect(closeButton.textContent.trim()).to.eq('关闭')
+           expect(closeButton.textContent.trim()).to.equal('关闭')
            closeButton.click()
            expect(callback).to.have.been.called
         })
@@ -58,9 +58,9 @@ describe('Toast',()=>{
     it('接受 position',()=>{
         const Constructor = Vue.extend(Toast)
         const vm = new Constructor({
-            propsData:{position:bottom}
+            propsData:{position:'bottom'}
         }).$mount()
-        expect(vm.$el.classList.contains('position-bottom').to.eq(true))
+        expect(vm.$el.classList.contains('position-bottom').to.equal(true))
     })
 
 })
