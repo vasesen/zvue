@@ -26,41 +26,41 @@ describe('Toast',()=>{
             },1600)
         })
 
-        it('接受closeButton',(done)=>{
-            const callback = sinon.fake()
+        // it('接受closeButton',(done)=>{
+        //     const callback = sinon.fake()
+        //     const Constructor = Vue.extend(Toast)
+        //     const vm = new Constructor({
+        //         propsData:{
+        //             closeButton:{
+        //                 text:'关闭',
+        //                 callback,
+        //             },
+        //         }            
+        //     }).$mount()
+        //    let closeButton = vm.$el.querySelector('.close') 
+        //    expect(closeButton.textContent.trim()).to.equal('关闭')
+        //    closeButton.click()
+        //    expect(callback).to.have.been.called
+        // })
+
+        it('接受 enableHtml',()=>{
+            const Constructor = Vue.extend('Toast')
+            const vm = new Constructor({
+                propsData:{enableHtml:true}
+            })
+            vm.$slots.default=['<i id="test">hi</i>']
+            vm.$mount()
+            let i = vm.$el.querySelector('#test')
+            expect(i).to.exist 
+        })
+    
+        it('接受 position',()=>{
             const Constructor = Vue.extend(Toast)
             const vm = new Constructor({
-                propsData:{
-                    closeButton:{
-                        text:'关闭',
-                        callback,
-                    },
-                }            
+                propsData:{position:'bottom'}
             }).$mount()
-           let closeButton = vm.$el.querySelector('.close') 
-           expect(closeButton.textContent.trim()).to.equal('关闭')
-           closeButton.click()
-           expect(callback).to.have.been.called
+            expect(vm.$el.classList.contains('position-bottom').to.equal(true))
         })
     }) 
-
-    it('接受 enableHtml',()=>{
-        const Constructor = Vue.extend('Toast')
-        const vm = new Constructor({
-            propsData:{enableHtml:true}
-        })
-        vm.$slots.default=['<i id="test">hi</i>']
-        vm.$mount()
-        let i = vm.$el.querySelector('#test')
-        expect(i).to.exist 
-    })
-
-    it('接受 position',()=>{
-        const Constructor = Vue.extend(Toast)
-        const vm = new Constructor({
-            propsData:{position:'bottom'}
-        }).$mount()
-        expect(vm.$el.classList.contains('position-bottom').to.equal(true))
-    })
 
 })
