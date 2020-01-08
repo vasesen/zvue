@@ -13,7 +13,7 @@ describe('Toast',()=>{
 
     describe('props',function(){
         it('接受autoClose',(done)=>{
-            let div  = document.createElement('div')
+            let div = document.createElement('div')
             const Constructor = Vue.extend(Toast)
             const vm = new Constructor({
                 propsData:{
@@ -21,27 +21,27 @@ describe('Toast',()=>{
                 }            
             }).$mount(div)
             setTimeout(()=>{
-                expect(document.body.contains(vm.$el).to.equal(false))
+                expect(document.body.contains(vm.$el)).to.eq(false)
                 done()
             },1600)
         })
 
-        // it('接受closeButton',(done)=>{
-        //     const callback = sinon.fake()
-        //     const Constructor = Vue.extend(Toast)
-        //     const vm = new Constructor({
-        //         propsData:{
-        //             closeButton:{
-        //                 text:'关闭',
-        //                 callback,
-        //             },
-        //         }            
-        //     }).$mount()
-        //    let closeButton = vm.$el.querySelector('.close') 
-        //    expect(closeButton.textContent.trim()).to.equal('关闭')
-        //    closeButton.click()
-        //    expect(callback).to.have.been.called
-        // })
+        it('接受closeButton',(done)=>{
+            const callback = sinon.fake()
+            const Constructor = Vue.extend(Toast)
+            const vm = new Constructor({
+                propsData:{
+                    closeButton:{
+                        text:'关闭',
+                        callback,
+                    },
+                }            
+            }).$mount()
+           let closeButton = vm.$el.querySelector('.close') 
+           expect(closeButton.textContent.trim()).to.equal('关闭')
+           closeButton.click()
+           expect(callback).to.have.been.called
+        })
 
         it('接受 enableHtml',()=>{
             const Constructor = Vue.extend('Toast')
@@ -59,7 +59,7 @@ describe('Toast',()=>{
             const vm = new Constructor({
                 propsData:{position:'bottom'}
             }).$mount()
-            expect(vm.$el.classList.contains('position-bottom').to.equal(true))
+            expect(vm.$el.classList.contains('position-bottom')).to.equal(true)
         })
     }) 
 
