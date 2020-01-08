@@ -18,12 +18,11 @@ export default {
     name:'ZToast',
     props:{
         autoClose:{
-            type:Boolean,
-            default:true
-        },
-        autoCloseDelay:{
-            type:Number,
-            default:3
+            type:[Boolean,Number],
+            default:1.5,
+            validator(value){
+                return value === false || typeof value === 'number'
+            }
         },
         closeButton:{
             type:Object,
@@ -65,7 +64,7 @@ export default {
             if(this.autoClose){
                 setTimeout(()=>{
                 this.close() 
-                },this.autoCloseDelay*1000)
+                },this.autoClose*1000)
             }
         },
         close(){
