@@ -26,7 +26,7 @@ describe('Toast',()=>{
             },1600)
         })
 
-        it('接受closeButton',(done)=>{
+        it('接受closeButton',()=>{
             const callback = sinon.fake()
             const Constructor = Vue.extend(Toast)
             const vm = new Constructor({
@@ -48,7 +48,7 @@ describe('Toast',()=>{
             const vm = new Constructor({
                 propsData:{enableHtml:true}
             })
-            vm.$slots.default=['<i id="test">hi</i>']
+            vm.$slots.default=['<span id="test">hi</span>']
             vm.$mount()
             let i = vm.$el.querySelector('#test')
             expect(i).to.exist 
